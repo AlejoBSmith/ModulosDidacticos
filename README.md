@@ -9,4 +9,6 @@ Como marco de trabajo se usa el PlatformIO para la programación y Qt para la in
 **Lista de tareas:**
 - [x] Implementación del PID
 - [x] Primera interfaz gráfica y comunicación con el Arduino
+- [ ] Bill of materials
+- [ ] Diseño 3D carcasa
 - [ ] Guías de laboratorio
