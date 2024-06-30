@@ -67,9 +67,9 @@ void loop() {
     StringEntrada = Serial.readStringUntil('\n');
     StringSplitter *splitter = new StringSplitter(StringEntrada, ',', 40);  // new StringSplitter(string_to_split, delimiter, limit)
     inicio = splitter->getItemAtIndex(0).toInt();
-    Kp = splitter->getItemAtIndex(1).toInt();
-    Ki = splitter->getItemAtIndex(2).toInt();
-    Kd = splitter->getItemAtIndex(3).toInt();
+    Kp = splitter->getItemAtIndex(1).toFloat();
+    Ki = splitter->getItemAtIndex(2).toFloat();
+    Kd = splitter->getItemAtIndex(3).toFloat();
     referencia = splitter->getItemAtIndex(4).toInt();
     time_delay = splitter->getItemAtIndex(5).toInt();
   }
@@ -87,11 +87,11 @@ void loop() {
       referencia=random(15,100);
       tiempoinicio=millis();
       a=1;
-    }
+    }*/
     tiempoanterior=tiempo;
     tiempo=millis();
     tiempociclo=tiempo-tiempoanterior;
-    if((tiempo-tiempoinicio>7500) && a==1){
+    /*if((tiempo-tiempoinicio>7500) && a==1){ //También requerido para la generación de valores para entrenamiento de red
       a=0;
     }*/
     encoderTicksAnterior=encoderTicksActual;
@@ -121,6 +121,6 @@ void loop() {
     Serial.print(int(accionDeriv));
     Serial.print("  ");
     Serial.println(int(sumaPID));
-    delay(10);
+    delay(time_delay+10);
   }
 }
