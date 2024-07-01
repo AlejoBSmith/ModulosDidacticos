@@ -6,9 +6,12 @@ En este repositorio se aloja el código para el módulo de control de motor DC. 
 
 Como marco de trabajo se usa el PlatformIO para la programación y Qt para la interfaz.
 
-**Lista de tareas:**
+**Lista de tareas prioritarias:**
 - [x] Implementación del PID
 - [x] Primera interfaz gráfica y comunicación con el Arduino
 - [ ] Bill of materials
 - [ ] Diseño 3D carcasa
 - [ ] Guías de laboratorio
+
+**Lista de tareas secundarias:**
+- [ ] Diferentes excitaciones: escalón, rampa, senoidal
